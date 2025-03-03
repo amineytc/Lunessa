@@ -7,7 +7,7 @@
     tools:context=".ui.splash.SplashFragment">
 
     <ImageView
-        android:layout_width="@dimen/_250sdp"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/_250sdp"
         android:layout_gravity="center"
         android:src="@drawable/splash" />
