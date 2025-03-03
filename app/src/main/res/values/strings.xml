@@ -2,4 +2,22 @@
     <string name="app_name">Lunessa</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="next">Next</string>
+    <string name="finish">Finish</string>
+
+    <string name="on_boarding">onBoarding</string>
+    <string name="finished">finished</string>
+
+    <string name="on_boarding_1_title">Discover Your Beauty!</string>
+    <string name="on_boarding_1">Do you love doing makeup? Uncover your unique beauty with inspiring
+        colors and easy steps, and explore the makeup styles that suit you best.</string>
+
+    <string name="on_boarding_2_title">Enhance Your Beauty!</string>
+    <string name="on_boarding_2">Step into the world of stunning makeup transformations.Vibrant palettes
+        discover the looks that highlight your unique style.</string>
+
+    <string name="on_boarding_3_title">Begin Your Beauty Journey!</string>
+    <string name="on_boarding_3">Step into the magical world of colors and style.
+        Are you ready to unveil your unique beauty?</string>
 </resources>
