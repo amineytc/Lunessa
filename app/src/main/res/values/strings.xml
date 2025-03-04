@@ -20,4 +20,14 @@
     <string name="on_boarding_3_title">Begin Your Beauty Journey!</string>
     <string name="on_boarding_3">Step into the magical world of colors and style.
         Are you ready to unveil your unique beauty?</string>
+
+    <string name="mail">E mail</string>
+    <string name="password">Password</string>
+    <string name="signin">Sign in</string>
+    <string name="signwith">Or sign in with</string>
+    <string name="signup">Sign up</string>
+    <string name="question">Don\'t have an account?</string>
+    <string name="confirm">Confirm Password</string>
+    <string name="signupwith">Or sign up with</string>
+    <string name="forgot_password">Forgot Password</string>
 </resources>
