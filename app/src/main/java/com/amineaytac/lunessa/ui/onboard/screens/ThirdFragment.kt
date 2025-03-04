@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.amineaytac.lunessa.R
 import com.amineaytac.lunessa.databinding.FragmentThirdBinding
 
@@ -25,7 +26,7 @@ class ThirdFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.finish.setOnClickListener {
-            //findNavController().navigate()
+            findNavController().navigate(R.id.action_onBoardingFragment_to_loginFragment2)
             onBoardingIsFinished()
         }
     }
