@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.auth.SignupFragment">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="@dimen/_170sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginTop="@dimen/_42sdp"
+        android:src="@drawable/ic_logo1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tv_signIn_mail"
+            android:layout_width="@dimen/_270sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_16sdp"
+            app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+            app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+            app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+            app:boxCornerRadiusTopStart="@dimen/_8sdp"
+            app:boxStrokeColor="@color/pinkish_red"
+            app:boxStrokeWidth="@dimen/_1sdp"
+            app:startIconDrawable="@drawable/ic_mail"
+            app:startIconTint="@color/oslo_grey">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/anticdidone"
+                android:hint="@string/mail"
+                android:paddingStart="@dimen/_36sdp"
+                android:textColorHint="@color/oslo_grey"
+                android:textSize="@dimen/_12ssp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tv_signIn_password"
+            android:layout_width="@dimen/_270sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_16sdp"
+            app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+            app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+            app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+            app:boxCornerRadiusTopStart="@dimen/_8sdp"
+            app:boxStrokeColor="@color/pinkish_red"
+            app:boxStrokeWidth="@dimen/_1sdp"
+            app:endIconDrawable="@drawable/ic_eye"
+            app:endIconMode="custom"
+            app:endIconTint="@color/oslo_grey"
+            app:startIconDrawable="@drawable/ic_lock"
+            app:startIconTint="@color/oslo_grey">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/anticdidone"
+                android:hint="@string/password"
+                android:paddingStart="@dimen/_36sdp"
+                android:textColorHint="@color/oslo_grey"
+                android:textSize="@dimen/_12ssp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tv_signIn_confirm_password"
+            android:layout_width="@dimen/_270sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_16sdp"
+            app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+            app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+            app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+            app:boxCornerRadiusTopStart="@dimen/_8sdp"
+            app:boxStrokeColor="@color/pinkish_red"
+            app:boxStrokeWidth="@dimen/_1sdp"
+            app:endIconDrawable="@drawable/ic_eye"
+            app:endIconMode="custom"
+            app:endIconTint="@color/oslo_grey"
+            app:startIconDrawable="@drawable/ic_lock"
+            app:startIconTint="@color/oslo_grey">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/anticdidone"
+                android:hint="@string/confirm"
+                android:paddingStart="@dimen/_36sdp"
+                android:textColorHint="@color/oslo_grey"
+                android:textSize="@dimen/_12ssp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_signIn"
+            android:layout_width="@dimen/_270sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:backgroundTint="@color/pinkish_red"
+            android:fontFamily="@font/anticdidone"
+            android:text="@string/signin"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            app:cornerRadius="@dimen/_8sdp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:fontFamily="@font/anticdidone"
+            android:text="@string/signupwith"
+            android:textColor="@color/tealish_blue"
+            android:textSize="@dimen/_12ssp" />
+
+        <ImageView
+            android:id="@+id/iv_signIn_google"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:src="@drawable/ic_google" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/_24sdp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/_24sdp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
