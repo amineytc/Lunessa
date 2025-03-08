@@ -9,7 +9,9 @@ import com.amineaytac.lunessa.databinding.FragmentOnBoardingBinding
 import com.amineaytac.lunessa.ui.onboard.screens.FirstFragment
 import com.amineaytac.lunessa.ui.onboard.screens.SecondFragment
 import com.amineaytac.lunessa.ui.onboard.screens.ThirdFragment
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class OnBoardingFragment : Fragment() {
 
     private lateinit var binding: FragmentOnBoardingBinding

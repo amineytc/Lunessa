@@ -9,7 +9,9 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.amineaytac.lunessa.R
 import com.amineaytac.lunessa.databinding.FragmentThirdBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ThirdFragment : Fragment() {
 
     private lateinit var binding: FragmentThirdBinding

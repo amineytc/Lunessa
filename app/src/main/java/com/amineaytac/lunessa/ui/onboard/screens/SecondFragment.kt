@@ -8,7 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.amineaytac.lunessa.R
 import com.amineaytac.lunessa.databinding.FragmentSecondBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SecondFragment : Fragment() {
 
     private lateinit var binding: FragmentSecondBinding
