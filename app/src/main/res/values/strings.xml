@@ -30,4 +30,11 @@
     <string name="confirm">Confirm Password</string>
     <string name="signupwith">Or sign up with</string>
     <string name="forgot_password">Forgot Password</string>
+
+    <string name="fill_inthe_blank">Fill in the blank</string>
+    <string name="invalid_email">Invalid email address</string>
+    <string name="must_six">Password length must be minimum 6 characters long</string>
+    <string name="signin_success">Sign in successfully</string>
+    <string name="please_signup">Please sign up</string>
+    <string name="unable_google">Unable to log in with Google</string>
 </resources>
