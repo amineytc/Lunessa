@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".ui.auth.LoginFragment">
+    tools:context=".ui.auth.login.LoginFragment">
 
     <ImageView
         android:id="@+id/imageView4"
@@ -42,6 +42,7 @@
             app:startIconTint="@color/oslo_grey">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_signin_mail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/anticdidone"
@@ -64,33 +65,23 @@
             app:boxCornerRadiusTopStart="@dimen/_8sdp"
             app:boxStrokeColor="@color/pinkish_red"
             app:boxStrokeWidth="@dimen/_1sdp"
-            app:endIconDrawable="@drawable/ic_eye"
+            app:endIconDrawable="@drawable/ic_eye_open"
             app:endIconMode="custom"
             app:endIconTint="@color/oslo_grey"
             app:startIconDrawable="@drawable/ic_lock"
             app:startIconTint="@color/oslo_grey">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_signin_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/anticdidone"
                 android:hint="@string/password"
+                android:inputType="textVisiblePassword"
                 android:paddingStart="@dimen/_36sdp"
                 android:textColorHint="@color/oslo_grey"
                 android:textSize="@dimen/_12ssp" />
         </com.google.android.material.textfield.TextInputLayout>
-
-        <TextView
-            android:id="@+id/tv_forgot_password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginTop="@dimen/_16sdp"
-            android:fontFamily="@font/anticdidone"
-            android:text="@string/forgot_password"
-            android:textColor="@color/tealish_blue"
-            android:textSize="@dimen/_12ssp"
-            android:textStyle="bold" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_signin"
