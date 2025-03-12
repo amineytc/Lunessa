@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".ui.auth.SignupFragment">
+    tools:context=".ui.auth.signup.SignupFragment">
 
     <ImageView
         android:id="@+id/imageView4"
@@ -27,7 +27,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView4">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tv_signIn_mail"
+            android:id="@+id/tv_signup_mail"
             android:layout_width="@dimen/_270sdp"
             android:layout_height="@dimen/_50sdp"
             android:layout_gravity="center"
@@ -42,6 +42,7 @@
             app:startIconTint="@color/oslo_grey">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_signup_mail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/anticdidone"
@@ -52,7 +53,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tv_signIn_password"
+            android:id="@+id/tv_signup_password"
             android:layout_width="@dimen/_270sdp"
             android:layout_height="@dimen/_50sdp"
             android:layout_gravity="center"
@@ -63,24 +64,26 @@
             app:boxCornerRadiusTopStart="@dimen/_8sdp"
             app:boxStrokeColor="@color/pinkish_red"
             app:boxStrokeWidth="@dimen/_1sdp"
-            app:endIconDrawable="@drawable/ic_eye"
+            app:endIconDrawable="@drawable/ic_eye_open"
             app:endIconMode="custom"
             app:endIconTint="@color/oslo_grey"
             app:startIconDrawable="@drawable/ic_lock"
             app:startIconTint="@color/oslo_grey">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_signup_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/anticdidone"
                 android:hint="@string/password"
+                android:inputType="textVisiblePassword"
                 android:paddingStart="@dimen/_36sdp"
                 android:textColorHint="@color/oslo_grey"
                 android:textSize="@dimen/_12ssp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tv_signIn_confirm_password"
+            android:id="@+id/tv_signup_confirm_password"
             android:layout_width="@dimen/_270sdp"
             android:layout_height="@dimen/_50sdp"
             android:layout_gravity="center"
@@ -91,31 +94,33 @@
             app:boxCornerRadiusTopStart="@dimen/_8sdp"
             app:boxStrokeColor="@color/pinkish_red"
             app:boxStrokeWidth="@dimen/_1sdp"
-            app:endIconDrawable="@drawable/ic_eye"
+            app:endIconDrawable="@drawable/ic_eye_open"
             app:endIconMode="custom"
             app:endIconTint="@color/oslo_grey"
             app:startIconDrawable="@drawable/ic_lock"
             app:startIconTint="@color/oslo_grey">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_signup_confirm_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/anticdidone"
                 android:hint="@string/confirm"
+                android:inputType="textVisiblePassword"
                 android:paddingStart="@dimen/_36sdp"
                 android:textColorHint="@color/oslo_grey"
                 android:textSize="@dimen/_12ssp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_signIn"
+            android:id="@+id/btn_signup"
             android:layout_width="@dimen/_270sdp"
             android:layout_height="@dimen/_50sdp"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/_16sdp"
             android:backgroundTint="@color/pinkish_red"
             android:fontFamily="@font/anticdidone"
-            android:text="@string/signin"
+            android:text="@string/signup"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="@dimen/_12ssp"
@@ -133,7 +138,7 @@
             android:textSize="@dimen/_12ssp" />
 
         <ImageView
-            android:id="@+id/iv_signIn_google"
+            android:id="@+id/iv_signup_google"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

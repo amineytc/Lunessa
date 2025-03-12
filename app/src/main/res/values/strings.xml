@@ -37,4 +37,10 @@
     <string name="signin_success">Sign in successfully</string>
     <string name="please_signup">Please sign up</string>
     <string name="unable_google">Unable to log in with Google</string>
+
+    <string name="failed_signin">Google Sign-In failed</string>
+    <string name="mismatch_password">Mismatched password</string>
+    <string name="missing_mailPass">Missing email address or password</string>
+    <string name="signup_success">Sign up successfully</string>
+    <string name="signup_failed">Sign up failed</string>
 </resources>
