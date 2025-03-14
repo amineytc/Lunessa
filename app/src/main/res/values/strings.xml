@@ -43,4 +43,9 @@
     <string name="missing_mailPass">Missing email address or password</string>
     <string name="signup_success">Sign up successfully</string>
     <string name="signup_failed">Sign up failed</string>
+
+    <string name="home">Home</string>
+    <string name="favorite">Favorite</string>
+    <string name="basket">Basket</string>
+    <string name="profile">Profile</string>
 </resources>
