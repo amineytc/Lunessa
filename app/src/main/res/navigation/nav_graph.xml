@@ -9,7 +9,7 @@
         android:id="@+id/splashFragment"
         android:name="com.amineaytac.lunessa.ui.splash.SplashFragment"
         android:label="fragment_splash"
-        tools:layout="@layout/fragment_splash" >
+        tools:layout="@layout/fragment_splash">
         <action
             android:id="@+id/action_splashFragment_to_onBoardingFragment"
             app:destination="@id/onBoardingFragment"
@@ -25,7 +25,7 @@
         android:id="@+id/onBoardingFragment"
         android:name="com.amineaytac.lunessa.ui.onboard.OnBoardingFragment"
         android:label="fragment_on_boarding"
-        tools:layout="@layout/fragment_on_boarding" >
+        tools:layout="@layout/fragment_on_boarding">
         <action
             android:id="@+id/action_onBoardingFragment_to_loginFragment2"
             app:destination="@id/loginFragment2"
@@ -36,7 +36,7 @@
         android:id="@+id/loginFragment2"
         android:name="com.amineaytac.lunessa.ui.auth.login.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment2_to_signupFragment"
             app:destination="@id/signupFragment" />
@@ -50,7 +50,7 @@
         android:id="@+id/signupFragment"
         android:name="com.amineaytac.lunessa.ui.auth.signup.SignupFragment"
         android:label="fragment_signup"
-        tools:layout="@layout/fragment_signup" >
+        tools:layout="@layout/fragment_signup">
         <action
             android:id="@+id/action_signupFragment_to_loginFragment2"
             app:destination="@id/loginFragment2" />
@@ -65,4 +65,19 @@
         android:name="com.amineaytac.lunessa.ui.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/favoriteFragment2"
+        android:name="com.amineaytac.lunessa.ui.favorite.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" />
+    <fragment
+        android:id="@+id/basketFragment2"
+        android:name="com.amineaytac.lunessa.ui.basket.BasketFragment"
+        android:label="fragment_basket"
+        tools:layout="@layout/fragment_basket" />
+    <fragment
+        android:id="@+id/profileFragment2"
+        android:name="com.amineaytac.lunessa.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>
