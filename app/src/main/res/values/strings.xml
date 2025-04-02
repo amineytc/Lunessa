@@ -48,4 +48,15 @@
     <string name="favorite">Favorite</string>
     <string name="basket">Basket</string>
     <string name="profile">Profile</string>
+
+    <string name="blush">Blush</string>
+    <string name="bronzer">Bronzer</string>
+    <string name="eyebrow">Eyebrow</string>
+    <string name="eyeliner">Eyeliner</string>
+    <string name="eyeshadow">Eyeshadow</string>
+    <string name="foundation">Foundation</string>
+    <string name="lipliner">Lip liner</string>
+    <string name="lipstick">Lipstick</string>
+    <string name="mascara">Mascara</string>
+    <string name="nailpolish">Nail polish</string>
 </resources>
