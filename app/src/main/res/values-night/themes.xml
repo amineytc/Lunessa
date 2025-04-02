@@ -4,4 +4,9 @@
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
     </style>
+
+    <style name="CustomBottomNavText" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/anticdidone</item>
+        <item name="android:textSize">@dimen/_9ssp</item>
+    </style>
 </resources>

@@ -24,6 +24,8 @@
         android:layout_height="wrap_content"
         android:background="@color/pinkish_red"
         app:itemIconTint="@color/white"
+        app:itemTextAppearanceActive="@style/CustomBottomNavText"
+        app:itemTextAppearanceInactive="@style/CustomBottomNavText"
         app:itemTextColor="@color/white"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
