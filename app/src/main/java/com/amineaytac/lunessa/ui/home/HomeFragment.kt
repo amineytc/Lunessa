@@ -7,7 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.amineaytac.lunessa.core.data.model.TypeItem
 import com.amineaytac.lunessa.databinding.FragmentHomeBinding
+import com.amineaytac.lunessa.ui.home.adapter.TypeAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -15,6 +18,7 @@ class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
     private val viewModel: HomeViewModel by viewModels()
+    private lateinit var typeAdapter: TypeAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,6 +33,22 @@ class HomeFragment : Fragment() {
 
         callInitialViewModelFunctions()
         observeUi()
+        setTypeRcyc()
+    }
+
+    private fun setTypeRcyc() = with(binding) {
+        typeAdapter = TypeAdapter(
+            onItemClickListener = {
+                if (it.name == "Blush") {
+                    //
+                }
+            }
+        )
+        rvType.layoutManager = LinearLayoutManager(
+            requireContext(), LinearLayoutManager.HORIZONTAL, false
+        )
+        typeAdapter.submitList(TypeItem.getDefaultList(requireContext()))
+        rvType.adapter = typeAdapter
     }
 
     private fun callInitialViewModelFunctions() {
