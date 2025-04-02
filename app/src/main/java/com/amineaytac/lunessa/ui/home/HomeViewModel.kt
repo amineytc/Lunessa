@@ -37,6 +37,8 @@ class HomeViewModel @Inject constructor(private val getAllMakeupUseCase: GetAllM
                     is ResponseState.Success -> {
                         _makeupScreenUiState.postValue(HomeScreenUiState(responseState.data))
                     }
+
+                    else -> {}
                 }
             }
         }
