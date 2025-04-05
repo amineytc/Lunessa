@@ -6,7 +6,7 @@ data class Makeup(
     val name: String,
     val price: String,
     val priceSign: String,
-    val imageLink: String,
+    val apiFeaturedImage: String,
     val category: String,
     val productType: String,
     val tagList: List<String>,
