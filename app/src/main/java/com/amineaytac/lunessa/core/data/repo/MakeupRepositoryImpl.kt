@@ -20,4 +20,12 @@ class MakeupRepositoryImpl @Inject constructor(private val restDataSource: RestD
             emit(ResponseState.Error(it.message.orEmpty()))
         }
     }
+
+    override suspend fun getMakeupProductsByType(productType: String): Flow<ResponseState<List<Makeup>>> {
+        return flow {
+            emit(ResponseState.Loading)
+            val response = restDataSource.getMakeupProductsByType(productType)
+            emit(ResponseState.Success(response.mapTo { it.toMakeupList() }))
+        }
+    }
 }
