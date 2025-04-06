@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 
 data class MakeupResponseItem(
     @SerializedName("api_featured_image")
-    val apiFeaturedİmage: String?,
+    val apiFeaturedImage: String?,
     @SerializedName("brand")
     val brand: String?,
     @SerializedName("category")
