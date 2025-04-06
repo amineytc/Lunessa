@@ -24,13 +24,24 @@ fun RestMakeupResponse.toMakeupList(): List<Makeup> {
             word.replaceFirstChar { char -> char.uppercase() }
         } ?: ""
 
+        val formattedPrice = when (it.price.orEmpty()) {
+            "0", "0.0" -> "10.0"
+            else -> it.price.orEmpty()
+        }
+
+        val cleanedName = it.name
+            ?.replace("\n", "")
+            ?.replace("\\s+".toRegex(), " ")
+            ?.trim()
+            .orEmpty()
+
         Makeup(
             it.id ?: -1,
             newBrand,
-            it.name.orEmpty(),
-            it.price.orEmpty(),
+            cleanedName,
+            formattedPrice,
             it.priceSign.orEmpty(),
-            it.imageLink.toString(),
+            it.apiFeaturedImage.toString(),
             it.category.orEmpty(),
             productTypeFormatted,
             it.tagList.toTagList(),

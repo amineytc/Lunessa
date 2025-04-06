@@ -10,4 +10,8 @@ class RestDataSourceImpl @Inject constructor(private val makeupRestApi: MakeupRe
     override suspend fun getAllMakeupProducts(): Response<MakeupResponse> {
         return makeupRestApi.getAllMakeupProducts()
     }
+
+    override suspend fun getMakeupProductsByType(productType: String): Response<MakeupResponse> {
+        return makeupRestApi.getMakeupProductsByType(productType)
+    }
 }

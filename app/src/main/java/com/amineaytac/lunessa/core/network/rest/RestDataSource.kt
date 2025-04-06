@@ -5,4 +5,5 @@ import retrofit2.Response
 
 interface RestDataSource {
     suspend fun getAllMakeupProducts(): Response<MakeupResponse>
+    suspend fun getMakeupProductsByType(productType: String): Response<MakeupResponse>
 }
