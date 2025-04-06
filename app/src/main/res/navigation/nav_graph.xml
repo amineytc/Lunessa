@@ -64,7 +64,11 @@
         android:id="@+id/homeFragment"
         android:name="com.amineaytac.lunessa.ui.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_typeFragment"
+            app:destination="@id/typeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/favoriteFragment2"
         android:name="com.amineaytac.lunessa.ui.favorite.FavoriteFragment"
@@ -80,4 +84,13 @@
         android:name="com.amineaytac.lunessa.ui.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/typeFragment"
+        android:name="com.amineaytac.lunessa.ui.type.TypeFragment"
+        android:label="fragment_type"
+        tools:layout="@layout/fragment_type">
+        <argument
+            android:name="productType"
+            app:argType="string" />
+    </fragment>
 </navigation>

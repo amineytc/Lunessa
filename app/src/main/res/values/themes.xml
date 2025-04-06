@@ -11,4 +11,9 @@
         <item name="fontFamily">@font/anticdidone</item>
         <item name="android:textSize">@dimen/_9ssp</item>
     </style>
+
+    <style name="CustomFloatingActionButton" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="backgroundTint">@color/pinkish_red</item>
+        <item name="tint">@color/white</item>
+    </style>
 </resources>

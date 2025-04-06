@@ -59,4 +59,7 @@
     <string name="lipstick">Lipstick</string>
     <string name="mascara">Mascara</string>
     <string name="nailpolish">Nail polish</string>
+
+    <string name="add_basket">Add to Basket</string>
+    <string name="rv_up">Icon up</string>
 </resources>
