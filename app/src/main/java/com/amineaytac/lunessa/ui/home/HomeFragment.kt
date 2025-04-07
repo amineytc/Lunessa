@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.amineaytac.lunessa.core.data.model.TypeItem
 import com.amineaytac.lunessa.databinding.FragmentHomeBinding
@@ -39,15 +40,16 @@ class HomeFragment : Fragment() {
     private fun setTypeRcyc() = with(binding) {
         typeAdapter = TypeAdapter(
             onItemClickListener = {
-                if (it.name == "Blush") {
-                    //
-                }
+                val productType = it.productType
+                val action = HomeFragmentDirections.actionHomeFragmentToTypeFragment(productType)
+                findNavController().navigate(action)
             }
         )
         rvType.layoutManager = LinearLayoutManager(
             requireContext(), LinearLayoutManager.HORIZONTAL, false
         )
         typeAdapter.submitList(TypeItem.getDefaultList(requireContext()))
+        rvType.setHasFixedSize(true)
         rvType.adapter = typeAdapter
     }
 
