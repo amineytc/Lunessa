@@ -62,4 +62,90 @@
 
     <string name="add_basket">Add to Basket</string>
     <string name="rv_up">Icon up</string>
+
+    <string-array name="brand_list">
+        <item>Almay</item>
+        <item>Alva</item>
+        <item>Anna Sui</item>
+        <item>Annabelle</item>
+        <item>Benefit</item>
+        <item>Boosh</item>
+        <item>Burt\'s Bees</item>
+        <item>Butter London</item>
+        <item>C\'est Moi</item>
+        <item>China Glaze</item>
+        <item>Clinique</item>
+        <item>Colourpop</item>
+        <item>Covergirl</item>
+        <item>Dalish</item>
+        <item>Deciem</item>
+        <item>Dior</item>
+        <item>Dr. Hauschka</item>
+        <item>E.L.F.</item>
+        <item>Essie</item>
+        <item>Fenty</item>
+        <item>Glossier</item>
+        <item>Green People</item>
+        <item>Iman</item>
+        <item>L\'Oréal</item>
+        <item>Marcelle</item>
+        <item>Marienatie</item>
+        <item>Maybelline</item>
+        <item>Milani</item>
+        <item>Mineral Fusion</item>
+        <item>Misa</item>
+        <item>Mistura</item>
+        <item>Moov</item>
+        <item>Nudus</item>
+        <item>Nyx</item>
+        <item>Orly</item>
+        <item>Pacifica</item>
+        <item>Piggy Paint</item>
+        <item>Pure Anada</item>
+        <item>Revlon</item>
+        <item>Salon Perfect</item>
+        <item>Sante</item>
+        <item>Sinful Colours</item>
+        <item>Smashbox</item>
+        <item>Stila</item>
+        <item>Suncoat</item>
+        <item>W3llpeople</item>
+        <item>Wet N Wild</item>
+        <item>Zorah</item>
+        <item>Zorah Biocosmetiques</item>
+        <item>Cargo Cosmetics</item>
+        <item>Coastal Classic Creation</item>
+        <item>Lotus Cosmetics USA</item>
+        <item>Maia\'s Mineral Galaxy</item>
+        <item>Penny Lane Organics</item>
+        <item>Physicians Formula</item>
+        <item>Rejuva Minerals</item>
+        <item>Sally B\'s Skin Yummies</item>
+    </string-array>
+
+    <string-array name="tag_list">
+        <item>Canadian</item>
+        <item>CertClean</item>
+        <item>Chemical Free</item>
+        <item>Dairy Free</item>
+        <item>EWG Verified</item>
+        <item>EcoCert</item>
+        <item>Fair Trade</item>
+        <item>Gluten Free</item>
+        <item>Natural</item>
+        <item>No Talc</item>
+        <item>Non-GMO</item>
+        <item>Organic</item>
+        <item>Sugar Free</item>
+        <item>USDA Organic</item>
+        <item>Vegan</item>
+        <item>Alcohol Free</item>
+        <item>Cruelty Free</item>
+        <item>Oil Free</item>
+        <item>Purpicks</item>
+        <item>Silicone Sree</item>
+        <item>Water Free</item>
+        <item>Hypoallergenic</item>
+        <item>Peanut Free Product</item>
+    </string-array>
 </resources>
