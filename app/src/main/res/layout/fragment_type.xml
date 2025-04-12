@@ -7,6 +7,97 @@
     android:background="@color/white"
     tools:context=".ui.type.TypeFragment">
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_button"
+        style="@style/CustomFloatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_72sdp"
+        android:clickable="true"
+        android:contentDescription="@string/rv_up"
+        android:focusable="true"
+        android:src="@drawable/ic_up"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_type"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_56sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <LinearLayout
+        android:id="@+id/filter_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:background="@drawable/bg_search_type" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_160sdp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fillViewport="true">
+
+            <GridLayout
+                android:id="@+id/checkboxContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:orientation="horizontal"
+                android:padding="@dimen/_8sdp" />
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_apply"
+            android:layout_width="@dimen/_110sdp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:backgroundTint="@color/new_pink"
+            android:text="@string/apply"
+            android:textColor="@color/tealish_blue"
+            app:cornerRadius="@dimen/_6sdp"
+            app:strokeColor="@color/pinkish_red"
+            app:strokeWidth="@dimen/_1sdp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/dim_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:alpha="0.5"
+        android:background="@android:color/black"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rv_type" />
+
     <ProgressBar
         android:id="@+id/pb_type"
         android:layout_width="wrap_content"
@@ -18,23 +109,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_type"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="@dimen/_8sdp"
-        android:layout_marginTop="@dimen/_16sdp"
-        android:layout_marginBottom="@dimen/_56sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
         android:id="@+id/iv_error"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_32sdp"
+        android:contentDescription="@string/error"
         android:src="@drawable/ic_eror"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,10 +123,13 @@
 
     <TextView
         android:id="@+id/tv_error"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
         android:layout_marginTop="@dimen/_16sdp"
         android:fontFamily="@font/anticdidone"
+        android:gravity="center"
+        android:text="@string/error"
         android:textColor="@color/tealish_blue"
         android:textSize="@dimen/_12ssp"
         android:visibility="gone"
@@ -54,18 +137,55 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_error" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingButton"
-        style="@style/CustomFloatingActionButton"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/_16sdp"
-        android:layout_marginBottom="@dimen/_72sdp"
-        android:clickable="true"
-        android:contentDescription="@string/rv_up"
-        android:focusable="true"
-        android:src="@drawable/ic_up"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:gravity="start"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:background="@color/new_pink"
+            android:text="@string/filter"
+            app:chipCornerRadius="@dimen/_6sdp"
+            app:chipIcon="@drawable/ic_filter"
+            app:chipIconTint="@color/pink_flare"
+            app:chipStrokeColor="@color/pink_flare"
+            app:chipStrokeWidth="@dimen/_1sdp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:background="@color/new_pink"
+            android:text="@string/brand"
+            app:chipCornerRadius="@dimen/_6sdp"
+            app:chipIcon="@drawable/ic_down"
+            app:chipIconTint="@color/pink_flare"
+            app:chipStrokeColor="@color/pink_flare"
+            app:chipStrokeWidth="@dimen/_1sdp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/new_pink"
+            android:text="@string/tag"
+            app:chipCornerRadius="@dimen/_6sdp"
+            app:chipIcon="@drawable/ic_down"
+            app:chipIconTint="@color/pink_flare"
+            app:chipStrokeColor="@color/pink_flare"
+            app:chipStrokeWidth="@dimen/_1sdp" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
