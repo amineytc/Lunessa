@@ -77,12 +77,6 @@ dependencies {
     //glide
     implementation("com.github.bumptech.glide:glide:4.16.0")
 
-    // retrofit
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.google.code.gson:gson:2.10.1")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
-
     // gsm
     implementation("com.google.android.gms:play-services-auth:21.3.0")
     implementation("androidx.credentials:credentials:1.3.0")
