@@ -9,6 +9,7 @@ import android.widget.GridLayout
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -89,6 +90,7 @@ class TypeFragment : Fragment() {
 
         setupChipClick(chip, "brand")
         setupChipClick(chipOne, "tag")
+        chipThree.setOnClickListener { findNavController().navigate(R.id.action_typeFragment_to_filterFragment) }
 
         dimView.setOnClickListener {
             filterLayout.gone()
@@ -219,7 +221,6 @@ class TypeFragment : Fragment() {
 
                 else -> {
                     pbType.gone()
-                    setRcyc()
                     makeupTypeAdapter.submitList(it.products)
                 }
             }

@@ -33,6 +33,8 @@ class MainActivity : AppCompatActivity() {
                 R.id.loginFragment2,
                 R.id.signupFragment,
                 R.id.basketFragment2,
+                R.id.filterItemFragment,
+                R.id.filterFragment,
                 R.id.onBoardingFragment -> {
                     binding.bottomNavView.gone()
                 }
