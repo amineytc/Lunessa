@@ -1,5 +1,6 @@
 package com.amineaytac.lunessa.core.data.repo
 
+import com.amineaytac.lunessa.core.data.model.FilterItem
 import com.amineaytac.lunessa.core.data.model.Makeup
 import com.amineaytac.lunessa.core.data.model.ProductsColors
 import com.amineaytac.lunessa.core.network.dto.MakeupResponse
@@ -70,4 +71,14 @@ fun ProductColors.toColors(): ProductsColors {
             colourName = productColor.colourName
         )
     } ?: ProductsColors(null, null)
+}
+
+fun List<String>.toFilterItemList(): List<FilterItem> {
+    return this.map { FilterItem(title = it, isSelected = false) }
+}
+
+fun List<FilterItem>.markSelected(selectedTitle: String): List<FilterItem> {
+    return this.map { item ->
+        item.copy(isSelected = item.title == selectedTitle)
+    }
 }
