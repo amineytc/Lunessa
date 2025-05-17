@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.filter.FilterFragment">
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/material_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="@dimen/_16sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:contentDescription="@string/back"
+            android:src="@drawable/ic_cancel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:fontFamily="@font/anticdidone"
+            android:text="@string/filter"
+            android:textColor="@color/tealish_blue"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:fontFamily="@font/anticdidone"
+            android:text="@string/clear"
+            android:textColor="@color/tealish_blue"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold" />
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:backgroundTint="@color/new_pink"
+        android:clickable="false"
+        android:fontFamily="@font/anticdidone"
+        android:text="@string/price"
+        android:textAlignment="viewStart"
+        android:textColor="@color/tealish_blue"
+        android:textStyle="bold"
+        app:cornerRadius="@dimen/_4sdp"
+        app:icon="@drawable/ic_right"
+        app:iconGravity="end"
+        app:iconTint="@color/pinkish_red"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/material_toolbar" />
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/range_slider"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:valueFrom="5"
+        android:valueTo="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/material_toolbar"
+        app:thumbColor="@color/pinkish_red"
+        app:thumbRadius="@dimen/_100sdp"
+        app:trackColorActive="@color/pink_flare"
+        app:trackColorInactive="@color/new_pink"
+        app:values="@array/initial_slider_values" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_brand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:backgroundTint="@color/new_pink"
+        android:fontFamily="@font/anticdidone"
+        android:text="@string/brand"
+        android:textAlignment="viewStart"
+        android:textColor="@color/tealish_blue"
+        android:textStyle="bold"
+        app:cornerRadius="@dimen/_4sdp"
+        app:icon="@drawable/ic_right"
+        app:iconGravity="end"
+        app:iconTint="@color/pinkish_red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/range_slider" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:backgroundTint="@color/new_pink"
+        android:fontFamily="@font/anticdidone"
+        android:text="@string/tag"
+        android:textAlignment="viewStart"
+        android:textColor="@color/tealish_blue"
+        android:textStyle="bold"
+        app:cornerRadius="@dimen/_4sdp"
+        app:icon="@drawable/ic_right"
+        app:iconGravity="end"
+        app:iconTint="@color/pinkish_red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_brand"
+        tools:ignore="VisualLintButtonSize" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:backgroundTint="@color/pink_flare"
+        android:fontFamily="@font/anticdidone"
+        android:text="@string/list_products"
+        android:textColor="@color/tealish_blue"
+        android:textStyle="bold"
+        app:cornerRadius="@dimen/_4sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_tag" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
